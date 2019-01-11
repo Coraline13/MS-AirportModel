@@ -1386,7 +1386,7 @@ f.passengers.add(ped);]]></Body>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<FileName><![CDATA[/Users/allen/Downloads/Flights.xlsx]]></FileName>
+					<FileName><![CDATA[Flights.xlsx]]></FileName>
 					<SaveInSnapshot>false</SaveInSnapshot>
 					<LoadOnStartup>true</LoadOnStartup>
 					<SaveOnDispose>true</SaveOnDispose>
