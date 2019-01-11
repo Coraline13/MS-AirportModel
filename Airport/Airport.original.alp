@@ -1201,7 +1201,7 @@ planBoardings();]]></StartupCode>
 				<ActionChartElement Class="ActionChart">
 					<Id>1547050744216</Id>
 					<Name><![CDATA[setupFlights]]></Name>
-					<X>1920</X><Y>40</Y>
+					<X>210</X><Y>820</Y>
 					<Label><X>-30</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1215,7 +1215,7 @@ planBoardings();]]></StartupCode>
 				<ActionChartElement Class="ForLoop">
 					<Id>1547050837372</Id>
 					<Name><![CDATA[forLoop]]></Name>
-					<X>1920</X><Y>140</Y>
+					<X>210</X><Y>920</Y>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -1227,23 +1227,10 @@ planBoardings();]]></StartupCode>
 						<Counting><![CDATA[i++]]></Counting>
 					</Properties>
 				</ActionChartElement>
-				<ActionChartElement Class="LocalVariable">
-					<Id>1547050861029</Id>
-					<Name><![CDATA[f]]></Name>
-					<X>1920</X><Y>190</Y>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties Width="40" Height="30" Constant="false" Previous="1547050837372" Next="1547050914568" >
-						<FillColor/>
-						<Type><![CDATA[Flight]]></Type>
-						<InitialValue><![CDATA[add_flights()]]></InitialValue>
-					</Properties>	
-				</ActionChartElement>
 				<ActionChartElement Class="Code">
 					<Id>1547050914568</Id>
 					<Name><![CDATA[code]]></Name>
-					<X>1920</X><Y>240</Y>
+					<X>210</X><Y>1020</Y>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -1254,10 +1241,23 @@ f.departureTime = excelFile.getCellDateValue(sheet,i+2,2);
 f.gate = (int)excelFile.getCellNumericValue(sheet,i+2,3);]]></Code>
 					</Properties>	
 				</ActionChartElement>
+				<ActionChartElement Class="LocalVariable">
+					<Id>1547050861029</Id>
+					<Name><![CDATA[f]]></Name>
+					<X>210</X><Y>970</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="40" Height="30" Constant="false" Previous="1547050837372" Next="1547050914568" >
+						<FillColor/>
+						<Type><![CDATA[Flight]]></Type>
+						<InitialValue><![CDATA[add_flights()]]></InitialValue>
+					</Properties>	
+				</ActionChartElement>
 				<ActionChartElement Class="Return">
 					<Id>1547050746349</Id>
 					<Name><![CDATA[returnStatement]]></Name>
-					<X>1920</X><Y>330</Y>
+					<X>210</X><Y>1110</Y>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -1268,7 +1268,7 @@ f.gate = (int)excelFile.getCellNumericValue(sheet,i+2,3);]]></Code>
 				<ActionChartElement Class="LocalVariable">
 					<Id>1547050815474</Id>
 					<Name><![CDATA[sheet]]></Name>
-					<X>1920</X><Y>90</Y>
+					<X>210</X><Y>870</Y>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -1462,7 +1462,7 @@ f.passengers.add(ped);]]></Body>
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[200]]></Code>
+								<Code><![CDATA[300]]></Code>
 								<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
 							</Value>
 						</Parameter>
@@ -1507,7 +1507,7 @@ f.passengers.add(ped);]]></Body>
 											<Name><![CDATA[business]]></Name>
 										</Parameter>
 										<Parameter>
-											<Name><![CDATA[flight]]></Name>
+											<Name><![CDATA[parameter]]></Name>
 										</Parameter>
 									</Parameters>
 									<ReplicationFlag>true</ReplicationFlag>
@@ -1933,7 +1933,7 @@ f.passengers.add(ped);]]></Body>
 						<Parameter>
 							<Name><![CDATA[services]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[checkInServicesLeft]]></Code>
+								<Code><![CDATA[chekcInServicesLeft]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -4622,59 +4622,8 @@ f.passengers.add(ped);]]></Body>
 					<ExceededQueuePolicy>EXTEND_QUEUE_TO_THE_FREE_SPACE</ExceededQueuePolicy>
 				</QueueLine>
 
-				<ServiceLine>
-					<Id>1547132510635</Id>
-					<Name><![CDATA[serviceLine5]]></Name>
-					<X>760</X><Y>245</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<OverrideQueueChoicePolicy>false</OverrideQueueChoicePolicy>
-					<QueueChoicePolicy>CLOSEST_QUEUE_STRICT</QueueChoicePolicy>
-					<Dx>0</Dx>
-					<Dy>-20</Dy>
-					<Bidirectional>false</Bidirectional>
-				</ServiceLine>
-
-				<ServiceLine>
-					<Id>1547132510902</Id>
-					<Name><![CDATA[serviceLine6]]></Name>
-					<X>800</X><Y>245</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<OverrideQueueChoicePolicy>false</OverrideQueueChoicePolicy>
-					<QueueChoicePolicy>CLOSEST_QUEUE_STRICT</QueueChoicePolicy>
-					<Dx>0</Dx>
-					<Dy>-20</Dy>
-					<Bidirectional>false</Bidirectional>
-				</ServiceLine>
-
-				<ServiceLine>
-					<Id>1547132512477</Id>
-					<Name><![CDATA[serviceLine7]]></Name>
-					<X>840</X><Y>245</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<OverrideQueueChoicePolicy>false</OverrideQueueChoicePolicy>
-					<QueueChoicePolicy>CLOSEST_QUEUE_STRICT</QueueChoicePolicy>
-					<Dx>0</Dx>
-					<Dy>-20</Dy>
-					<Bidirectional>false</Bidirectional>
-				</ServiceLine>
-
 				<QueueLine>
-					<Id>1547132513645</Id>
+					<Id>1547041106570</Id>
 					<Name><![CDATA[queueLine5]]></Name>
 					<X>760</X><Y>325</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -4697,53 +4646,22 @@ f.passengers.add(ped);]]></Body>
 					<ExceededQueuePolicy>EXTEND_QUEUE_TO_THE_FREE_SPACE</ExceededQueuePolicy>
 				</QueueLine>
 
-				<QueueLine>
-					<Id>1547132513884</Id>
-					<Name><![CDATA[queueLine6]]></Name>
-					<X>800</X><Y>325</Y>
+				<ServiceLine>
+					<Id>1547041108888</Id>
+					<Name><![CDATA[serviceLine5]]></Name>
+					<X>760</X><Y>245</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<Z>0</Z>
-					<Reversed>false</Reversed>
-					<LimitedCapacity>false</LimitedCapacity>
-					<Capacity><![CDATA[10]]></Capacity>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>25</Y></Point>
-						<Point><X>0</X><Y>-25</Y></Point>
-						<Point><X>0</X><Y>-60</Y></Point>
-						<Point><X>0</X><Y>-15</Y></Point>
-						<Point><X>0</X><Y>0</Y></Point>
-					</Points>
-					<ExceededQueuePolicy>EXTEND_QUEUE_TO_THE_FREE_SPACE</ExceededQueuePolicy>
-				</QueueLine>
-
-				<QueueLine>
-					<Id>1547132514852</Id>
-					<Name><![CDATA[queueLine7]]></Name>
-					<X>840</X><Y>325</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Reversed>false</Reversed>
-					<LimitedCapacity>false</LimitedCapacity>
-					<Capacity><![CDATA[10]]></Capacity>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>25</Y></Point>
-						<Point><X>0</X><Y>-25</Y></Point>
-						<Point><X>0</X><Y>-60</Y></Point>
-						<Point><X>0</X><Y>-15</Y></Point>
-						<Point><X>0</X><Y>0</Y></Point>
-					</Points>
-					<ExceededQueuePolicy>EXTEND_QUEUE_TO_THE_FREE_SPACE</ExceededQueuePolicy>
-				</QueueLine>
+					<OverrideQueueChoicePolicy>false</OverrideQueueChoicePolicy>
+					<QueueChoicePolicy>CLOSEST_QUEUE_STRICT</QueueChoicePolicy>
+					<Dx>0</Dx>
+					<Dy>-20</Dy>
+					<Bidirectional>false</Bidirectional>
+				</ServiceLine>
 
 			</Shapes>
 
@@ -4763,7 +4681,7 @@ f.passengers.add(ped);]]></Body>
 				<ServiceWithLine>
 					<ServiceColor>-16744448</ServiceColor>
 					<Id>1547041639090</Id>
-					<Name><![CDATA[checkInServicesLeft]]></Name>
+					<Name><![CDATA[chekcInServicesLeft]]></Name>
 					<X>560</X><Y>362</Y>
 					<Label><X>-95</X><Y>-22</Y></Label>
 					<PublicFlag>true</PublicFlag>
@@ -4817,7 +4735,7 @@ f.passengers.add(ped);]]></Body>
 				<ServicePoint>
 					<Id>1547041639096</Id>
 					<Name><![CDATA[servicePoint]]></Name>
-					<X>485</X><Y>351</Y>
+					<X>485</X><Y>380</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4832,7 +4750,7 @@ f.passengers.add(ped);]]></Body>
 				<ServicePoint>
 					<Id>1547041639098</Id>
 					<Name><![CDATA[servicePoint1]]></Name>
-					<X>485</X><Y>322</Y>
+					<X>485</X><Y>351</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4847,7 +4765,22 @@ f.passengers.add(ped);]]></Body>
 				<ServicePoint>
 					<Id>1547041668165</Id>
 					<Name><![CDATA[servicePoint2]]></Name>
-					<X>485</X><Y>380</Y>
+					<X>485</X><Y>409</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<OverrideQueueChoicePolicy>false</OverrideQueueChoicePolicy>
+					<QueueChoicePolicy>CLOSEST_QUEUE_STRICT</QueueChoicePolicy>
+					<Rotation>180</Rotation>
+				</ServicePoint>
+
+				<ServicePoint>
+					<Id>1547041668366</Id>
+					<Name><![CDATA[servicePoint3]]></Name>
+					<X>485</X><Y>438</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4905,38 +4838,8 @@ f.passengers.add(ped);]]></Body>
 				</QueueLine>
 
 				<ServicePoint>
-					<Id>1547131166984</Id>
-					<Name><![CDATA[servicePoint3]]></Name>
-					<X>485</X><Y>409</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<OverrideQueueChoicePolicy>false</OverrideQueueChoicePolicy>
-					<QueueChoicePolicy>CLOSEST_QUEUE_STRICT</QueueChoicePolicy>
-					<Rotation>180</Rotation>
-				</ServicePoint>
-
-				<ServicePoint>
-					<Id>1547131167241</Id>
+					<Id>1547041704571</Id>
 					<Name><![CDATA[servicePoint4]]></Name>
-					<X>485</X><Y>438</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<OverrideQueueChoicePolicy>false</OverrideQueueChoicePolicy>
-					<QueueChoicePolicy>CLOSEST_QUEUE_STRICT</QueueChoicePolicy>
-					<Rotation>180</Rotation>
-				</ServicePoint>
-
-				<ServicePoint>
-					<Id>1547131168312</Id>
-					<Name><![CDATA[servicePoint8]]></Name>
 					<X>485</X><Y>467</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
@@ -5066,7 +4969,7 @@ f.passengers.add(ped);]]></Body>
 				<ServicePoint>
 					<Id>1547041838091</Id>
 					<Name><![CDATA[servicePoint5]]></Name>
-					<X>906</X><Y>323</Y>
+					<X>906</X><Y>352</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5081,7 +4984,7 @@ f.passengers.add(ped);]]></Body>
 				<ServicePoint>
 					<Id>1547041838093</Id>
 					<Name><![CDATA[servicePoint6]]></Name>
-					<X>906</X><Y>352</Y>
+					<X>906</X><Y>381</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5096,21 +4999,6 @@ f.passengers.add(ped);]]></Body>
 				<ServicePoint>
 					<Id>1547041859361</Id>
 					<Name><![CDATA[servicePoint7]]></Name>
-					<X>906</X><Y>381</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<OverrideQueueChoicePolicy>false</OverrideQueueChoicePolicy>
-					<QueueChoicePolicy>CLOSEST_QUEUE_STRICT</QueueChoicePolicy>
-					<Rotation>0</Rotation>
-				</ServicePoint>
-
-				<ServicePoint>
-					<Id>1547131171501</Id>
-					<Name><![CDATA[servicePoint9]]></Name>
 					<X>906</X><Y>410</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
@@ -5124,8 +5012,8 @@ f.passengers.add(ped);]]></Body>
 				</ServicePoint>
 
 				<ServicePoint>
-					<Id>1547131171756</Id>
-					<Name><![CDATA[servicePoint18]]></Name>
+					<Id>1547041859562</Id>
+					<Name><![CDATA[servicePoint8]]></Name>
 					<X>906</X><Y>439</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
@@ -5139,8 +5027,8 @@ f.passengers.add(ped);]]></Body>
 				</ServicePoint>
 
 				<ServicePoint>
-					<Id>1547131171822</Id>
-					<Name><![CDATA[servicePoint19]]></Name>
+					<Id>1547041860497</Id>
+					<Name><![CDATA[servicePoint9]]></Name>
 					<X>906</X><Y>468</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
@@ -6540,69 +6428,6 @@ f.passengers.add(ped);]]></Body>
 					<QueueChoicePolicy>CLOSEST_QUEUE_STRICT</QueueChoicePolicy>
 				</ServiceWithLine>
 
-				<DensityMap>
-					<Id>1547061428701</Id>
-					<Name><![CDATA[densityMap]]></Name>
-					<X>760</X><Y>920</Y>
-					<Label><X>-15</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Width>10</Width>
-					<Height>200</Height>
-					<EnableAttenuation>true</EnableAttenuation>
-					<Transparency>0.25</Transparency>
-					<CriticalDensity>1.5</CriticalDensity>
-					<ColorScheme>LOGARITHMIC</ColorScheme>
-				</DensityMap>
-
-				<FlowStatistics>
-					<Id>1547126101432</Id>
-					<Name><![CDATA[pedFlowScp]]></Name>
-					<X>530</X><Y>260</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<LineColor>-16744448</LineColor>
-					<Dx>330</Dx>
-					<Dy>0</Dy>
-					<Direction>left</Direction>
-				</FlowStatistics>
-				<FlowStatistics>
-					<Id>1547126504925</Id>
-					<Name><![CDATA[pedFlowLeft]]></Name>
-					<X>520</X><Y>220</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<LineColor>-16744448</LineColor>
-					<Dx>0</Dx>
-					<Dy>-60</Dy>
-					<Direction>left</Direction>
-				</FlowStatistics>
-				<FlowStatistics>
-					<Id>1547126617484</Id>
-					<Name><![CDATA[pedFlowRight]]></Name>
-					<X>870</X><Y>160</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<LineColor>-16744448</LineColor>
-					<Dx>0</Dx>
-					<Dy>60</Dy>
-					<Direction>left</Direction>
-				</FlowStatistics>
 			</Shapes>
 
 					<Z>0</Z>
@@ -8545,191 +8370,12 @@ f.passengers.add(ped);]]></Body>
 					<RotationX>0.0</RotationX>
 					<RotationZ>270.0</RotationZ>
 				</Camera3D>
-				<Figure3D>
-					<Id>1547054404820</Id>
-					<Name><![CDATA[officeWorker10]]></Name>
-					<X>473</X><Y>320</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<X>473</X><Y>320</Y><Z>0</Z>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[3d/officeworker.dae]]></FileName>
-					<ColorTable>
-						<ColorMapping>
-							<Name><![CDATA[Material__1__Surf]]></Name>
-							<OriginalColor>-3407872</OriginalColor>
-						</ColorMapping>
-						<ColorMapping>
-							<Name><![CDATA[Material__2__Surf]]></Name>
-							<OriginalColor>-12434878</OriginalColor>
-						</ColorMapping>
-						<ColorMapping>
-							<Name><![CDATA[Material__3__Surf]]></Name>
-							<OriginalColor>-9353174</OriginalColor>
-						</ColorMapping>
-						<ColorMapping>
-							<Name><![CDATA[Material__4__Surf]]></Name>
-							<OriginalColor>-3355444</OriginalColor>
-						</ColorMapping>
-						<ColorMapping>
-							<Name><![CDATA[Material__5__Surf]]></Name>
-							<OriginalColor>-3361145</OriginalColor>
-						</ColorMapping>
-					</ColorTable>
-					<AutoScale>true</AutoScale>
-					<Scale>1.0</Scale>
-					<Rotation>0.0</Rotation>
-					<AxisOrder>YZX_AXIS_ORDER</AxisOrder>
-					<ApplyShading>true</ApplyShading>
-				</Figure3D>
-				<Figure3D>
-					<Id>1547054404822</Id>
-					<Name><![CDATA[table14]]></Name>
-					<X>479</X><Y>320</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<X>479</X><Y>320</Y><Z>0</Z>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[3d/table.dae]]></FileName>
-					<ColorTable>
-						<ColorMapping>
-							<Name><![CDATA[material0]]></Name>
-							<OriginalColor>-14391175</OriginalColor>
-						</ColorMapping>
-						<ColorMapping>
-							<Name><![CDATA[material1]]></Name>
-							<OriginalColor>-11184811</OriginalColor>
-						</ColorMapping>
-					</ColorTable>
-					<AutoScale>true</AutoScale>
-					<Scale>1.0</Scale>
-					<Rotation>90.0</Rotation>
-					<AxisOrder>XYZ_AXIS_ORDER</AxisOrder>
-					<ApplyShading>true</ApplyShading>
-				</Figure3D>
-				<Figure3D>
-					<Id>1547054743755</Id>
-					<Name><![CDATA[officeWorker11]]></Name>
-					<X>918</X><Y>323</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<X>918</X><Y>323</Y><Z>0</Z>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[3d/officeworker.dae]]></FileName>
-					<ColorTable>
-						<ColorMapping>
-							<Name><![CDATA[Material__1__Surf]]></Name>
-							<OriginalColor>-3407872</OriginalColor>
-						</ColorMapping>
-						<ColorMapping>
-							<Name><![CDATA[Material__2__Surf]]></Name>
-							<OriginalColor>-12434878</OriginalColor>
-						</ColorMapping>
-						<ColorMapping>
-							<Name><![CDATA[Material__3__Surf]]></Name>
-							<OriginalColor>-9353174</OriginalColor>
-						</ColorMapping>
-						<ColorMapping>
-							<Name><![CDATA[Material__4__Surf]]></Name>
-							<OriginalColor>-3355444</OriginalColor>
-						</ColorMapping>
-						<ColorMapping>
-							<Name><![CDATA[Material__5__Surf]]></Name>
-							<OriginalColor>-3361145</OriginalColor>
-						</ColorMapping>
-					</ColorTable>
-					<AutoScale>true</AutoScale>
-					<Scale>1.0</Scale>
-					<Rotation>180.0</Rotation>
-					<AxisOrder>YZX_AXIS_ORDER</AxisOrder>
-					<ApplyShading>true</ApplyShading>
-				</Figure3D>
-				<Figure3D>
-					<Id>1547054743758</Id>
-					<Name><![CDATA[table15]]></Name>
-					<X>912</X><Y>323</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<X>912</X><Y>323</Y><Z>0</Z>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<FileName><![CDATA[3d/table.dae]]></FileName>
-					<ColorTable>
-						<ColorMapping>
-							<Name><![CDATA[material0]]></Name>
-							<OriginalColor>-14391175</OriginalColor>
-						</ColorMapping>
-						<ColorMapping>
-							<Name><![CDATA[material1]]></Name>
-							<OriginalColor>-11184811</OriginalColor>
-						</ColorMapping>
-					</ColorTable>
-					<AutoScale>true</AutoScale>
-					<Scale>1.0</Scale>
-					<Rotation>270.0</Rotation>
-					<AxisOrder>XYZ_AXIS_ORDER</AxisOrder>
-					<ApplyShading>true</ApplyShading>
-				</Figure3D>
-				<Text>
-					<Id>1547132260816</Id>
-					<Name><![CDATA[text1]]></Name>
-					<X>380</X><Y>80</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<Rotation>0.0</Rotation>
-					<Color>-16744448</Color>
-					<Text><![CDATA[Pedestrian rate (peds / hour):]]></Text>
-					<Font>
-						<Name>SansSerif</Name>
-						<Size>12</Size>
-						<Style>1</Style>
-					</Font>
-					<Alignment>LEFT</Alignment>
-				</Text>
-				<Text>
-					<Id>1547132543822</Id>
-					<Name><![CDATA[text]]></Name>
-					<X>680</X><Y>80</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<Rotation>0.0</Rotation>
-					<Color>-16777216</Color>
-					<Text><![CDATA[text]]></Text>
-					<TextCode><![CDATA[format((int)(pedSource.rate))]]></TextCode>
-					<Font>
-						<Name>SansSerif</Name>
-						<Size>10</Size>
-						<Style>0</Style>
-					</Font>
-					<Alignment>LEFT</Alignment>
-				</Text>
 			</Shapes>
 			<Controls>
 				<Control Type="Window3D">
 					<Id>1547040682357</Id>
 					<Name><![CDATA[window3d]]></Name>
-					<X>0</X><Y>1540</Y>
+					<X>0</X><Y>1350</Y>
 					<Width>500</Width>
 					<Height>300</Height>
 					<MakeDefaultViewArea>true</MakeDefaultViewArea>
@@ -8740,271 +8386,7 @@ f.passengers.add(ped);]]></Body>
 					<FarClippingDistance>2000</FarClippingDistance>
 					<Camera>camera</Camera>
 				</Control>
-				<Control Type="Slider">
-				 	<EmbeddedIcon>false</EmbeddedIcon>				
-					<Id>1547132090215</Id>
-					<Name><![CDATA[slider]]></Name>
-					<X>570</X><Y>70</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<BasicProperties Width="100" Height="30">
-                        <EmbeddedIcon>false</EmbeddedIcon>	
-						<Enabled>true</Enabled>
-					</BasicProperties>
-					<ExtendedProperties>
-						<DefaultValueCode><![CDATA[250]]></DefaultValueCode>
-						<Orientation>HORIZONTAL</Orientation>
-						<MinValue><![CDATA[0]]></MinValue>
-						<MaxValue><![CDATA[600]]></MaxValue>
-						<LinkTo>true</LinkTo>
-						<Link>pedSource.rate</Link>
-					</ExtendedProperties>
-				</Control>
 			</Controls>
-			<Charts>
-    			<TimePlot>
-					<Id>1547126145561</Id>
-					<Name><![CDATA[PedTraffic]]></Name>
-					<X>410</X><Y>920</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<AutoUpdate>true</AutoUpdate>
-					<OccurrenceAtTime>true</OccurrenceAtTime>
-					<OccurrenceDate>1547193600000</OccurrenceDate>
-					<OccurrenceTime Class="CodeUnitValue">
-						<Code><![CDATA[0]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
-					</OccurrenceTime>
-					<RecurrenceCode Class="CodeUnitValue">
-						<Code><![CDATA[1]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
-					</RecurrenceCode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Width>340</Width>
-					<Height>260</Height>
-					<BackgroundColor/>
-					<BorderColor/>
-					<ChartArea>
-						<XOffset>50</XOffset>
-						<YOffset>30</YOffset>
-						<Width>260</Width>
-						<Height>150</Height>
-						<BackgroundColor>-1</BackgroundColor>
-						<BorderColor>-16777216</BorderColor>
-						<GridColor>-12566464</GridColor>
-					</ChartArea>
-					<Legend>
-						<Place>SOUTH</Place>
-						<TextColor>-16777216</TextColor>
-						<Size>50</Size>
-					</Legend>
-					<Labels>
-						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
-						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
-						<TextColor>-12566464</TextColor>
-					</Labels>
-					<ShowLegend>true</ShowLegend>
-					<TimeWindowsMovementType>MOVEMENT_WITH_TIME</TimeWindowsMovementType>		
-					<TimeWindowUnits>MODEL_TIME_UNIT</TimeWindowUnits>
-					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
-					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
-					<VerScaleType>AUTO</VerScaleType>
-					<DrawLine>true</DrawLine>
-					<Interpolation>LINEAR</Interpolation>
-					<DatasetExpression>  
-						<Title><![CDATA[PedTrafficLeft]]></Title>
-					<Expression><![CDATA[my_dataset]]></Expression>
-					<Color>-65536</Color>
-					<Expression2><![CDATA[pedFlowLeft.traffic()]]></Expression2>
-					<Expression2Flag>true</Expression2Flag>
-						<PointStyle>NONE</PointStyle>
-						<LineWidth>1.0</LineWidth>
-					</DatasetExpression>
-					<DatasetExpression>  
-						<Title><![CDATA[PedTrafficTotal]]></Title>
-					<Expression><![CDATA[my_dataset1]]></Expression>
-					<Color>-13447886</Color>
-					<Expression2><![CDATA[pedFlowScp.traffic()]]></Expression2>
-					<Expression2Flag>true</Expression2Flag>
-						<PointStyle>NONE</PointStyle>
-						<LineWidth>1.0</LineWidth>
-					</DatasetExpression>
-					<DatasetExpression>  
-						<Title><![CDATA[PedTrafficRight]]></Title>
-					<Expression><![CDATA[my_dataset2]]></Expression>
-					<Color>-14774017</Color>
-					<Expression2><![CDATA[pedFlowRight.traffic()]]></Expression2>
-					<Expression2Flag>true</Expression2Flag>
-						<PointStyle>NONE</PointStyle>
-						<LineWidth>1.0</LineWidth>
-					</DatasetExpression>
-					<SamplesToKeep>100</SamplesToKeep>
-					<TimeWindowExpression><![CDATA[100]]></TimeWindowExpression>
-					<FillAreaUnderLine>true</FillAreaUnderLine>
-					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
-    			</TimePlot>
-    			<TimePlot>
-					<Id>1547126803961</Id>
-					<Name><![CDATA[PedIntensity]]></Name>
-					<X>40</X><Y>920</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<AutoUpdate>true</AutoUpdate>
-					<OccurrenceAtTime>true</OccurrenceAtTime>
-					<OccurrenceDate>1547193600000</OccurrenceDate>
-					<OccurrenceTime Class="CodeUnitValue">
-						<Code><![CDATA[0]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
-					</OccurrenceTime>
-					<RecurrenceCode Class="CodeUnitValue">
-						<Code><![CDATA[1]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
-					</RecurrenceCode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Width>340</Width>
-					<Height>260</Height>
-					<BackgroundColor/>
-					<BorderColor/>
-					<ChartArea>
-						<XOffset>50</XOffset>
-						<YOffset>30</YOffset>
-						<Width>260</Width>
-						<Height>150</Height>
-						<BackgroundColor>-1</BackgroundColor>
-						<BorderColor>-16777216</BorderColor>
-						<GridColor>-12566464</GridColor>
-					</ChartArea>
-					<Legend>
-						<Place>SOUTH</Place>
-						<TextColor>-16777216</TextColor>
-						<Size>50</Size>
-					</Legend>
-					<Labels>
-						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
-						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
-						<TextColor>-12566464</TextColor>
-					</Labels>
-					<ShowLegend>true</ShowLegend>
-					<TimeWindowsMovementType>MOVEMENT_WITH_TIME</TimeWindowsMovementType>		
-					<TimeWindowUnits>MODEL_TIME_UNIT</TimeWindowUnits>
-					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
-					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
-					<VerScaleType>AUTO</VerScaleType>
-					<DrawLine>true</DrawLine>
-					<Interpolation>LINEAR</Interpolation>
-					<DatasetExpression>  
-						<Title><![CDATA[PedIntensityLeft]]></Title>
-					<Expression><![CDATA[my_dataset]]></Expression>
-					<Color>-65536</Color>
-					<Expression2><![CDATA[pedFlowLeft.intensity()]]></Expression2>
-					<Expression2Flag>true</Expression2Flag>
-						<PointStyle>NONE</PointStyle>
-						<LineWidth>1.0</LineWidth>
-					</DatasetExpression>
-					<DatasetExpression>  
-						<Title><![CDATA[PedIntensityotal]]></Title>
-					<Expression><![CDATA[my_dataset1]]></Expression>
-					<Color>-13447886</Color>
-					<Expression2><![CDATA[pedFlowScp.intensity()]]></Expression2>
-					<Expression2Flag>true</Expression2Flag>
-						<PointStyle>NONE</PointStyle>
-						<LineWidth>1.0</LineWidth>
-					</DatasetExpression>
-					<DatasetExpression>  
-						<Title><![CDATA[PedIntensityRight]]></Title>
-					<Expression><![CDATA[my_dataset2]]></Expression>
-					<Color>-14774017</Color>
-					<Expression2><![CDATA[pedFlowRight.intensity()]]></Expression2>
-					<Expression2Flag>true</Expression2Flag>
-						<PointStyle>NONE</PointStyle>
-						<LineWidth>1.0</LineWidth>
-					</DatasetExpression>
-					<SamplesToKeep>100</SamplesToKeep>
-					<TimeWindowExpression><![CDATA[100]]></TimeWindowExpression>
-					<FillAreaUnderLine>true</FillAreaUnderLine>
-					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
-    			</TimePlot>
-    			<TimePlot>
-					<Id>1547130189264</Id>
-					<Name><![CDATA[QueueSizes]]></Name>
-					<X>80</X><Y>1210</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<AutoUpdate>true</AutoUpdate>
-					<OccurrenceAtTime>true</OccurrenceAtTime>
-					<OccurrenceDate>1547193600000</OccurrenceDate>
-					<OccurrenceTime Class="CodeUnitValue">
-						<Code><![CDATA[0]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
-					</OccurrenceTime>
-					<RecurrenceCode Class="CodeUnitValue">
-						<Code><![CDATA[1]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
-					</RecurrenceCode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Width>260</Width>
-					<Height>210</Height>
-					<BackgroundColor/>
-					<BorderColor/>
-					<ChartArea>
-						<XOffset>50</XOffset>
-						<YOffset>30</YOffset>
-						<Width>180</Width>
-						<Height>120</Height>
-						<BackgroundColor>-1</BackgroundColor>
-						<BorderColor>-16777216</BorderColor>
-						<GridColor>-12566464</GridColor>
-					</ChartArea>
-					<Legend>
-						<Place>SOUTH</Place>
-						<TextColor>-16777216</TextColor>
-						<Size>30</Size>
-					</Legend>
-					<Labels>
-						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
-						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
-						<TextColor>-12566464</TextColor>
-					</Labels>
-					<ShowLegend>true</ShowLegend>
-					<TimeWindowsMovementType>MOVEMENT_WITH_TIME</TimeWindowsMovementType>		
-					<TimeWindowUnits>MODEL_TIME_UNIT</TimeWindowUnits>
-					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
-					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
-					<VerScaleType>AUTO</VerScaleType>
-					<DrawLine>true</DrawLine>
-					<Interpolation>LINEAR</Interpolation>
-					<DatasetExpression>  
-						<Title><![CDATA[CheckInLeft]]></Title>
-					<Expression><![CDATA[my_dataset]]></Expression>
-					<Color>-14774017</Color>
-					<Expression2><![CDATA[checkInAtCounterLeft.countPeds()]]></Expression2>
-					<Expression2Flag>true</Expression2Flag>
-						<PointStyle>NONE</PointStyle>
-						<LineWidth>1.0</LineWidth>
-					</DatasetExpression>
-					<DatasetExpression>  
-						<Title><![CDATA[CheckInRight]]></Title>
-					<Expression><![CDATA[my_dataset1]]></Expression>
-					<Color>-65536</Color>
-					<Expression2><![CDATA[checkInAtCounterRight.countPeds()]]></Expression2>
-					<Expression2Flag>true</Expression2Flag>
-						<PointStyle>NONE</PointStyle>
-						<LineWidth>1.0</LineWidth>
-					</DatasetExpression>
-					<SamplesToKeep>100</SamplesToKeep>
-					<TimeWindowExpression><![CDATA[100]]></TimeWindowExpression>
-					<FillAreaUnderLine>true</FillAreaUnderLine>
-					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
-    			</TimePlot>
-			</Charts>
 
 		</ActiveObjectClass>
 		<!--   =========   Active Object Class   ========  -->
